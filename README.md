@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digiminds Academy
+
+Welcome to Digiminds Academy, an online platform dedicated to providing personalized learning experiences with expert
+tutors. Our mission is to empower students to excel in every subject through convenient and effective online tutoring.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview
+
+Digiminds Academy offers a range of online tutoring services, including one-on-one lectures, group classes, prerecorded
+lectures, and more. Our platform connects students with experienced and certified tutors to help them achieve their
+academic goals.
+
+## Features
+
+- **Personalized Learning**: Tailored tutoring sessions to meet individual student needs.
+- **Experienced Tutors**: Access to a network of qualified and experienced tutors.
+- **Flexible Scheduling**: Convenient scheduling options to fit any student's timetable.
+- **Diverse Subjects**: Tutoring available for a wide range of subjects and levels.
+- **Interactive Platform**: Engaging and interactive online learning environment.
+
+## Technologies Used
+
+- **HTML5**: For structuring the web pages.
+- **CSS3**: For styling the web pages.
+- **Font Awesome**: For icons and visual enhancements.
+- **Google Fonts**: For custom fonts.
+- **JavaScript**: For interactive elements and functionality.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- A web browser (e.g., Chrome, Firefox)
+- A code editor (e.g., PyCharm, VSCode)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/Mopheshi/digiminds-academy.git
+    ```
+2. Open the project in your code editor.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Open the `index.html` file in your web browser to view the homepage.
+2. Navigate through the different sections to explore the features and services offered by Digiminds Academy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
 
-## Deploy on Vercel
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+- **Email**: sample@gmail.com
+- **Phone**: +923001234567
+- **Address**: J Block, Street 14
+
+Follow us on social media:
+
+- [Google](#)
+- [Facebook](#)
+- [WhatsApp](#)
+- [Instagram](#)
+
+---
+
+© 2024 Digiminds Academy. All rights reserved.
