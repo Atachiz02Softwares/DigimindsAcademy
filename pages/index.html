@@ -2,592 +2,91 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>
-        Digiminds Academy
-    </title>
+    <title>Digiminds Academy</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Roboto", sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-        }
-
-        .navbar a.login,
-        .navbar a.signup {
-            border: 1px solid #007bff;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        .navbar a.signup {
-            background-color: #007bff;
-            color: #fff;
-        }
-
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 100px 50px 50px 50px;
-            background: linear-gradient(
-                    to right,
-                    rgba(0, 0, 0, 0.8),
-                    rgba(0, 0, 0, 0.5)
-            ),
-            url("https://storage.googleapis.com/a1aa/image/L61RpY0Hi54kHJ9teClAtxdd9zxa6UT1yhxAZ1inP3VTwu8JA.jpg") no-repeat center center/cover;
-            color: #fff;
-        }
-
-        .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero-text h1 span {
-            color: #007bff;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            padding: 30px;
-            background-color: #fff;
-        }
-
-        .stats div {
-            text-align: center;
-        }
-
-        .stats div i {
-            font-size: 36px;
-            color: #007bff;
-            margin-bottom: 10px;
-        }
-
-        .stats div p {
-            font-size: 18px;
-            margin: 5px 0;
-        }
-
-        .stats div p span {
-            font-weight: 700;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero-text {
-                max-width: 100%;
-            }
-
-            .stats {
-                flex-direction: column;
-            }
-
-            .stats div {
-                margin-bottom: 20px;
-            }
-        }
-
-        .container {
-            padding: 20px;
-        }
-
-        .header {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 24px;
-            color: #333;
-        }
-
-        .header h2 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .header h2 span {
-            color: #007bff;
-        }
-
-        .header p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .recommended-tutors {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .recommended-tutors h3 {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .recommended-tutors a {
-            font-size: 16px;
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .tutor-cards {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .tutor-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            width: 200px;
-            margin: 10px;
-            text-align: left;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-
-        .tutor-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .tutor-card img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-
-        .tutor-card h4 {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin: 10px 0;
-        }
-
-        .tutor-card p {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
-        }
-
-        .tutor-card .rating {
-            margin-top: 10px;
-        }
-
-        .tutor-card .rating i {
-            color: #f39c12;
-        }
-
-        @media (max-width: 768px) {
-            .tutor-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        .new-section {
-            background-color: #f8f9fa;
-            padding: 50px 20px;
-        }
-
-        .new-header {
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 50px 20px;
-            text-align: left;
-        }
-
-        .new-header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        .new-header p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-
-        .new-header span {
-            color: #007bff;
-        }
-
-        .services {
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .services h2 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        .services h2 span {
-            color: #007bff;
-        }
-
-        .services p {
-            font-size: 1.2em;
-            margin: 20px 0;
-        }
-
-        .service-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .service-card {
-            border: 2px solid #007bff;
-            border-radius: 10px;
-            padding: 20px;
-            width: 250px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-card i {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .service-card h3 {
-            font-size: 1.2em;
-            color: #007bff;
-            margin: 10px 0;
-        }
-
-        .service-card p {
-            font-size: 1em;
-            color: #333;
-        }
-
-        @media (max-width: 768px) {
-            .service-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <link href="/styles/styles.css" rel="stylesheet"/>
 </head>
 <body>
 <nav class="navbar">
     <div class="logo">
-        <a href="#" style="font-size: 24px; font-weight: 700">
-            Digiminds Academy
-        </a>
+        <a href="#" style="font-size: 24px; font-weight: 700">Digiminds Academy</a>
     </div>
     <div class="nav-links">
-        <a href="#">
-            Tutors
-        </a>
-        <a href="#">
-            About Us
-        </a>
-        <a href="#">
-            Services
-        </a>
-        <a href="#">
-            Blogs
-        </a>
-        <a href="#">
-            Contact Us
-        </a>
-        <a class="login" href="#">
-            Log In
-        </a>
-        <a class="signup" href="#">
-            Sign Up
-        </a>
+        <a href="#">Tutors</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Blogs</a>
+        <a href="#">Contact Us</a>
+        <a class="login" href="#">Log In</a>
+        <a class="signup" href="#">Sign Up</a>
     </div>
 </nav>
 <section class="hero">
     <div class="hero-text">
-        <h1>
-            Learn, Grow, and Succeed with
-            <span>
-      Online Tutoring
-     </span>
-        </h1>
-        <p>
-            Experience personalized learning that empowers you to excel in every
-            subject, with expert tutors available at your convenience.
-        </p>
+        <h1>Learn, Grow, and Succeed with <span>Online Tutoring</span></h1>
+        <p>Experience personalized learning that empowers you to excel in every subject, with expert tutors available at your convenience.</p>
     </div>
 </section>
 <section class="stats">
     <div>
-        <i class="fas fa-smile">
-        </i>
-        <p>
-     <span>
-      2000+
-     </span>
-        </p>
-        <p>
-            Satisfied Parents
-        </p>
+        <i class="fas fa-smile"></i>
+        <p><span>2000+</span></p>
+        <p>Satisfied Parents</p>
     </div>
     <div>
-        <i class="fas fa-graduation-cap">
-        </i>
-        <p>
-     <span>
-      100+
-     </span>
-        </p>
-        <p>
-            Experience Tutors
-        </p>
+        <i class="fas fa-graduation-cap"></i>
+        <p><span>100+</span></p>
+        <p>Experience Tutors</p>
     </div>
     <div>
-        <i class="fas fa-star">
-        </i>
-        <p>
-     <span>
-      100+
-     </span>
-        </p>
-        <p>
-            5 Stars Tutors Review
-        </p>
+        <i class="fas fa-star"></i>
+        <p><span>100+</span></p>
+        <p>5-star Tutors Review</p>
     </div>
     <div>
-        <i class="fas fa-clock">
-        </i>
-        <p>
-     <span>
-      10000+
-     </span>
-        </p>
-        <p>
-            Hours Taught
-        </p>
+        <i class="fas fa-clock"></i>
+        <p><span>10000+</span></p>
+        <p>Hours Taught</p>
     </div>
 </section>
 <div class="container">
     <div class="header">
-        <h1>
-            Tutors
-        </h1>
-        <h2>
-            Learn from the Best Experienced and
-            <span>
-      Certified Tutors
-     </span>
-        </h2>
-        <p>
-            Our qualified tutors provide personalized support to help you excel.
-            With experience and a passion for teaching, we're here to guide your
-            success.
-        </p>
+        <h1>Tutors</h1>
+        <h2>Learn from the Best Experienced and <span>Certified Tutors</span></h2>
+        <p>Our qualified tutors provide personalized support to help you excel. With experience and a passion for teaching, we're here to guide your success.</p>
     </div>
     <div class="recommended-tutors">
-        <h3>
-            Recommended Tutors
-        </h3>
-        <a href="#">
-            Browse All
-        </a>
+        <h3>Recommended Tutors</h3>
+        <a href="#">Browse All</a>
     </div>
     <div class="tutor-cards">
         <div class="tutor-card">
-            <img alt="Portrait of a tutor" height="80"
-                 src="https://storage.googleapis.com/a1aa/image/11bYM7FHISY8EZ3xo9W5WJRsYmKB9Zolbk586elYAeqYtd5TA.jpg"
-                 width="80"/>
-            <h4>
-                Tutor Name
-            </h4>
-            <p>
-                Qualification: M.Sc. Math
-            </p>
-            <p>
-                University: Name
-            </p>
-            <p>
-                Experience: Over 10 Years
-            </p>
-            <p>
-                Subjects: Math &amp; Statistic
-            </p>
+            <img alt="Portrait of a tutor" height="80" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="80"/>
+            <h4>Tutor Name</h4>
+            <p>Qualification: M.Sc. Math</p>
+            <p>University: Name</p>
+            <p>Experience: Over 10 Years</p>
+            <p>Subjects: Math &amp; Statistic</p>
             <div class="rating">
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
             </div>
         </div>
-        <div class="tutor-card">
-            <img alt="Portrait of a tutor" height="80"
-                 src="https://storage.googleapis.com/a1aa/image/11bYM7FHISY8EZ3xo9W5WJRsYmKB9Zolbk586elYAeqYtd5TA.jpg"
-                 width="80"/>
-            <h4>
-                Tutor Name
-            </h4>
-            <p>
-                Qualification: M.Sc. Math
-            </p>
-            <p>
-                University: Name
-            </p>
-            <p>
-                Experience: Over 10 Years
-            </p>
-            <p>
-                Subjects: Math &amp; Statistic
-            </p>
-            <div class="rating">
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-            </div>
-        </div>
-        <div class="tutor-card">
-            <img alt="Portrait of a tutor" height="80"
-                 src="https://storage.googleapis.com/a1aa/image/11bYM7FHISY8EZ3xo9W5WJRsYmKB9Zolbk586elYAeqYtd5TA.jpg"
-                 width="80"/>
-            <h4>
-                Tutor Name
-            </h4>
-            <p>
-                Qualification: M.Sc. Math
-            </p>
-            <p>
-                University: Name
-            </p>
-            <p>
-                Experience: Over 10 Years
-            </p>
-            <p>
-                Subjects: Math &amp; Statistic
-            </p>
-            <div class="rating">
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-            </div>
-        </div>
-        <div class="tutor-card">
-            <img alt="Portrait of a tutor" height="80"
-                 src="https://storage.googleapis.com/a1aa/image/11bYM7FHISY8EZ3xo9W5WJRsYmKB9Zolbk586elYAeqYtd5TA.jpg"
-                 width="80"/>
-            <h4>
-                Tutor Name
-            </h4>
-            <p>
-                Qualification: M.Sc. Math
-            </p>
-            <p>
-                University: Name
-            </p>
-            <p>
-                Experience: Over 10 Years
-            </p>
-            <p>
-                Subjects: Math &amp; Statistic
-            </p>
-            <div class="rating">
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-                <i class="fas fa-star">
-                </i>
-            </div>
-        </div>
+        <!-- Repeat tutor-card for other tutors -->
     </div>
-</div>
-
-<!-- New Section -->
-<div class="new-section">
-    <div class="new-header">
+</div>    <div class="new-header">
         <h3>About Us</h3>
         <h1>Inspiring Students with Quality Online Education</h1>
-        <p>At <span>TutoriaQuori</span>, we provide comprehensive online education across a range of professional
-            courses, designed to help individuals up skill and advance their careers. Our platform not only offers
-            students personalized learning experiences guided by industry experts, but also creates valuable
-            opportunities for teachers and professionals looking to share their expertise.</p>
-        <p>With flexible course options and a global reach, we aim to empower both learners and educators to thrive in
-            today's competitive world. Whether you're learning or teaching, <span>TutoriaQuori</span> is your gateway to
-            success.</p>
+        <p>At <span>TutoriaQuori</span>, we provide comprehensive online education across a range of professional courses, designed to help individuals up skill and advance their careers. Our platform not only offers students personalized learning experiences guided by industry experts, but also creates valuable opportunities for teachers and professionals looking to share their expertise.</p>
+        <p>With flexible course options and a global reach, we aim to empower both learners and educators to thrive in today's competitive world. Whether you're learning or teaching, <span>TutoriaQuori</span> is your gateway to success.</p>
     </div>
     <div class="services">
         <h2>Explore Diverse Range of Tutoring and <span>Courses</span></h2>
-        <p>Discover expertly crafted programs and personalized learning experiences designed to meet the needs of every
-            student and professional learner.</p>
+        <p>Discover expertly crafted programs and personalized learning experiences designed to meet the needs of every student and professional learner.</p>
         <div class="service-cards">
             <div class="service-card">
                 <i class="fas fa-chalkboard-teacher"></i>
@@ -595,42 +94,188 @@
                 <p>Provide personalized, real-time instruction between a tutor and a single student.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>Group or Class Lectures</h3>
-                <p>Involve real-time instruction with multiple students participating in the same session.</p>
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Live One-on-One Lectures</h3>
+                <p>Provide personalized, real-time instruction between a tutor and a single student.</p>
             </div>
             <div class="service-card">
-                <i class="fas fa-video"></i>
-                <h3>Prerecorded Lectures</h3>
-                <p>Pre-recorded instructional videos that students can watch at their convenience.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-file-alt"></i>
-                <h3>Entry Test Preparation</h3>
-                <p>Targeted study sessions to help in admission exams for schools, colleges, or universities.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-file-signature"></i>
-                <h3>Mocks Test & Exams Practice</h3>
-                <p>Exams practice to help students assess their knowledge and improve performance.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-tasks"></i>
-                <h3>Assignments Guidance</h3>
-                <p>With expert advice & support to complete assignment accurately and on time.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-certificate"></i>
-                <h3>Certification Programs</h3>
-                <p>Offer training and recognition to enhance professional skills and qualifications.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-chalkboard"></i>
-                <h3>Teaching Skill Courses</h3>
-                <p>Focus on developing effective instructional techniques and strategies for educators.</p>
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Live One-on-One Lectures</h3>
+                <p>Provide personalized, real-time instruction between a tutor and a single student.</p>
             </div>
         </div>
     </div>
 </div>
+<div class="section section-dark">
+    <h2>Expert <span class="highlight">Articles &amp; Blogs</span> For Online Students</h2>
+    <p>Offerings valuable tips, strategies, and insights to help students excel in their online learning journey.</p>
+    <div class="card-container">
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img alt="Person studying with a laptop and books" height="200" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="300"/>
+            <div class="card-content">
+                <h3>Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur. Mi lectus risus tincidunt ipsum sed lobortis cras.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-light">
+    <h2>Testimonials</h2>
+    <h2 class="highlight">Success Stories</h2>
+    <h2>from our Student and Families</h2>
+    <p>Highlights the academic and personal growth shared by those who have benefited from our tutoring.</p>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img alt="Student photo" height="50" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="50"/>
+                <div>
+                    <h4>Student Name</h4>
+                    <p>Class/Course Name</p>
+                </div>
+            </div>
+            <p>Discover expertly crafted programs and personalized learning experiences designed to meet the needs of every student and professional learner.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img alt="Student photo" height="50" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="50"/>
+                <div>
+                    <h4>Student Name</h4>
+                    <p>Class/Course Name</p>
+                </div>
+            </div>
+            <p>Discover expertly crafted programs and personalized learning experiences designed to meet the needs of every student and professional learner.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img alt="Student photo" height="50" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="50"/>
+                <div>
+                    <h4>Student Name</h4>
+                    <p>Class/Course Name</p>
+                </div>
+            </div>
+            <p>Discover expertly crafted programs and personalized learning experiences designed to meet the needs of every student and professional learner.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="contact-form">
+        <h2>Contact Us for Support and Inquiries</h2>
+        <form>
+            <input name="name" placeholder="Name" required="" type="text"/>
+            <input name="email" placeholder="Email" required="" type="email"/>
+            <textarea name="message" placeholder="Message" required="" rows="5"></textarea>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <div class="image-container">
+        <img alt="A smiling student wearing a graduation cap and holding a laptop" height="400" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_hero.max-1000x1000.jpg" width="600"/>
+    </div>
+</div>
+<div class="footer">
+    <div>
+        <h3>Digiminds Academy</h3>
+        <p>Experience personalized learning that empowers you to excel in every subject, with expert tutors available at your convenience. Our platform not only offers students</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-google"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div>
+        <h3>Quick links</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tutors</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Educational Blogs</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">For Tutors</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Our Services</h3>
+        <ul>
+            <li><a href="#">Live One-on-One Lectures</a></li>
+            <li><a href="#">Group or Class Lectures</a></li>
+            <li><a href="#">Prerecorded Lectures</a></li>
+            <li><a href="#">Entry Test Preparation</a></li>
+            <li><a href="#">Mock &amp; Exam Preparation</a></li>
+            <li><a href="#">Assignments Guidance</a></li>
+            <li><a href="#">Certification Programs</a></li>
+            <li><a href="#">Teaching Skills</a></li>
+        </ul>
+    </div>
+    <div>
+        <h3>Contact Us</h3>
+        <ul>
+            <li><i class="fas fa-envelope"></i> sample@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +923001234567</li>
+            <li><i class="fas fa-map-marker-alt"></i> J Block, Street 14</li>
+        </ul>
+    </div>
+</div>
+<footer>
+    <p style="text-align: center;">Copyright © 2024 tutoriaquest.com</p>
+</footer>
+<script src="/scripts/scripts.js"></script>
 </body>
 </html>
