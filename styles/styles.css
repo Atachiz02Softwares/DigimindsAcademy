@@ -44,6 +44,8 @@ body {
 .navbar .buttons a.signup {
     background-color: #00f;
     border: none;
+    padding: 10px 30px;
+    margin-right: 50px;
 }
 
 .hero {
