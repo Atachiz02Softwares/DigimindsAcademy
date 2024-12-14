@@ -32,7 +32,6 @@ body {
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #00f;
 }
 
 .navbar .buttons a {
@@ -511,20 +510,48 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 500px;
 }
 
 .testimonial {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    opacity: 0.5;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
     background-color: #007bff;
-    border-radius: 10px;
-    margin: 0 10px; /* Add horizontal margin */
+    border-radius: 20px;
+    margin: 0 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-align: left;
+    color: #fff;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.testimonial .name,
+.testimonial .course {
+    margin: 0;
+}
+
+.testimonial .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonial .footer-description {
+    margin-top: 10px;
+}
+
+.testimonial .stars {
+    margin-top: 10px;
+    color: #f39c12;
 }
 
 .testimonial.active {
@@ -662,8 +689,7 @@ body {
 }
 
 .footer-header {
-    font-family: 'Brush Script MT', cursive;
-    font-size: 36px;
+    font-size: 24px;
     color: #0000FF;
     text-align: left;
 }
@@ -671,20 +697,20 @@ body {
 .footer-description {
     font-size: 16px;
     color: #333;
-    margin: 10px 0;
     text-align: left;
+    margin: 10px 0;
 }
 
 .social-icons {
-    margin: 20px 0;
+    margin-top: 20px;
     text-align: left;
 }
 
 .social-icons a {
-    margin: 0 10px;
     color: #0000FF;
     font-size: 24px;
     text-decoration: none;
+    margin: 20px 10px 0;
 }
 
 .quick-links {
@@ -780,4 +806,8 @@ body {
         width: 100%;
         margin-bottom: 10px;
     }
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
