@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -19,14 +23,16 @@ body {
 }
 
 .navbar a {
-    color: #fff;
+    color: #dddfff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .navbar a:hover {
-    color: #26ff00;
+    color: #cccfff;
+    transform: scale(1.05);
 }
 
 .navbar .logo {
@@ -41,9 +47,9 @@ body {
 }
 
 .navbar .buttons a:hover {
-    background-color: #00f;
-    color: #ffffff;
-    border: 1px solid #00f;
+    background-color: #dddfff;
+    color: #00f;
+    border: 1px solid #dddfff;
 }
 
 .navbar .buttons a.signup {
@@ -54,7 +60,7 @@ body {
 }
 
 .navbar .buttons a.signup:hover {
-    background-color: #ffffff;
+    background-color: #dddfff;
     color: #00f;
     border: none;
 }
@@ -224,7 +230,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    margin: 0 20px;
+    margin: 20px 20px 0;
     transition: transform 0.3s ease;
 }
 
@@ -345,6 +351,63 @@ body {
 
     .about-us-image-content::before {
         background: linear-gradient(to top, black, transparent);
+    }
+}
+
+.values-vision-mission-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.values-vision-mission-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.values-vision-mission-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 50px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.values-vision-mission-content:hover {
+    background-color: #dddfff;
+    transform: translateY(-10px);
+}
+
+.values-vision-mission-content i {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.values-vision-mission-content h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.values-vision-mission-content p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .values-vision-mission-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-vision-mission-content {
+        width: 80%;
+        margin-bottom: 20px;
     }
 }
 
@@ -578,10 +641,11 @@ body {
 .navigation {
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: calc(100% - 40px);
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    padding: 0 20px;
 }
 
 .navigation i {
@@ -793,11 +857,13 @@ body {
 
 .footer::before {
     content: "";
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 100vw; /* Full viewport width */
     height: 1px;
     background-color: #0000FF;
-    margin-bottom: 10px;
+    margin: 0 auto 10px; /* Center the line and add bottom margin */
+    position: absolute;
+    left: 0;
 }
 
 @media (max-width: 768px) {
@@ -822,4 +888,34 @@ body {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+.social-signup {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-signup p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.google-signup {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #db4437;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.google-signup i {
+    margin-right: 10px;
+}
+
+.google-signup:hover {
+    background-color: #c33d2e;
 }

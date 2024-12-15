@@ -3,22 +3,22 @@
     <title>DigiMinds Foundation</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/globals.css">
 </head>
-<body>
+<body id="home">
 <div class="navbar">
-    <div class="logo">DigiMinds Foundation</div>
+    <a href="#home" class="logo">DigiMinds Foundation</a>
     <div class="quick-links">
-        <a href="#">Tutors</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Blogs</a>
-        <a href="#">Contact Us</a>
+        <a href="#tutors">Tutors</a>
+        <a href="#about-us">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#contact-us">Contact Us</a>
     </div>
     <div class="buttons">
         <a href="#">For Tutors</a>
         <a href="#">Sign In</a>
-        <a class="signup" href="#">Sign Up</a>
+        <a class="signup" href="signup.html">Sign Up</a>
     </div>
 </div>
 <div class="hero">
@@ -68,7 +68,7 @@
     <p>Our qualified tutors provide personalized support to help you excel. With experience and a passion for teaching,
         we're here to guide your success.</p>
 </div>
-<div class="tutor-section" style="background-color: #fff; color: #333;">
+<div id="tutors" class="tutor-section" style="background-color: #fff; color: #333;">
     <div class="testimonial-container">
         <div class="recommended-tutors">
             <h2>Recommended Tutors</h2>
@@ -146,7 +146,7 @@
         </div>
     </div>
 </div>
-<div class="about-us-section">
+<div id="about-us" class="about-us-section">
     <div class="about-us-container">
         <div class="about-us-text-content">
             <p>About Us</p>
@@ -167,7 +167,29 @@
         </div>
     </div>
 </div>
-<div class="courses-section">
+<div class="values-vision-mission-section">
+    <div class="values-vision-mission-container">
+        <div class="values-vision-mission-content">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h2>Our Values</h2>
+            <p>We believe in Empowerment, Inclusivity, Innovation, Sustainability, and Community Engagement as the core
+                principles that guide our work and impact in the community.</p>
+        </div>
+        <div class="values-vision-mission-content">
+            <i class="fas fa-lightbulb"></i>
+            <h2>Our Vision</h2>
+            <p>To create a generation of digitally empowered youth who can lead, innovate, and drive sustainable
+                development in their communities, fostering a brighter future for all.</p>
+        </div>
+        <div class="values-vision-mission-content">
+            <i class="fas fa-eye"></i>
+            <h2>Our Mission</h2>
+            <p>To bridge the digital divide and create equal opportunities for youth through comprehensive digital
+                skills training programs that prepare them for success in technology-driven industries.</p>
+        </div>
+    </div>
+</div>
+<div id="services" class="courses-section">
     <h1>
         Explore Diverse Range of Tutoring and
         <span>
@@ -269,7 +291,7 @@
         </div>
     </div>
 </div>
-<div class="blogs-section">
+<div id="blogs" class="blogs-section">
     <div class="blogs-text">
         <h1>
             Expert
@@ -478,7 +500,7 @@
         <i class="fas fa-chevron-right" onclick="nextSlide()"></i>
     </div>
 </div>
-<div class="contact-body">
+<div id="contact-us" class="contact-body">
     <div class="contact-container">
         <div class="form-container">
             <h1>Contact Us for Support and Inquiries</h1>
@@ -555,6 +577,6 @@
         Copyright © 2024 DigiMinds Foundation
     </div>
 </div>
-<script src="/scripts/scripts.js"></script>
+<script src="/scripts/globals.js"></script>
 </body>
 </html>
