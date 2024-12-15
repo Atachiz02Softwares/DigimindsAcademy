@@ -26,7 +26,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #00f;
+    color: #26ff00;
 }
 
 .navbar .logo {
@@ -40,11 +40,23 @@ body {
     border: 1px solid #fff;
 }
 
+.navbar .buttons a:hover {
+    background-color: #00f;
+    color: #ffffff;
+    border: 1px solid #00f;
+}
+
 .navbar .buttons a.signup {
     background-color: #00f;
     border: none;
     padding: 10px 30px;
     margin-right: 50px;
+}
+
+.navbar .buttons a.signup:hover {
+    background-color: #ffffff;
+    color: #00f;
+    border: none;
 }
 
 .hero {
