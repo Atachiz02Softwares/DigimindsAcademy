@@ -889,33 +889,3 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
-.social-signup {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-signup p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
-}
-
-.google-signup {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #db4437;
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.google-signup i {
-    margin-right: 10px;
-}
-
-.google-signup:hover {
-    background-color: #c33d2e;
-}

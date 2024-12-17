@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up - DigiMinds Foundation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/styles/globals.css">
+    <link rel="stylesheet" href="/styles/auth.css">
+</head>
+<body>
+<div class="navbar">
+    <a href="../home.html#home" class="logo">DigiMinds Foundation</a>
+    <div class="quick-links">
+        <a href="../home.html#tutors">Tutors</a>
+        <a href="../home.html#about-us">About Us</a>
+        <a href="../home.html#services">Services</a>
+        <a href="../home.html#blogs">Blogs</a>
+        <a href="../home.html#contact-us">Contact Us</a>
+    </div>
+    <div class="buttons">
+        <a href="#">For Tutors</a>
+        <a class="signin" href="signin.html">Sign In</a>
+        <a class="signup" href="signup.html">Sign Up</a>
+    </div>
+</div>
+<div class="signup-container">
+    <h1>Sign Up for DigiMinds Foundation</h1>
+    <p>Create an account to join our community and start learning with us!</p>
+    <form id="signupForm">
+        <div class="input-group">
+            <label for="email"></label><input id="email" name="email" placeholder="Enter your email address"
+                                              type="email"/>
+        </div>
+        <div class="error" id="emailError"></div>
+        <div class="input-group">
+            <label for="password"></label><input id="password" name="password" placeholder="Enter your password"
+                                                 type="password"/>
+        </div>
+        <div class="error" id="passwordError"></div>
+        <div class="input-group">
+            <label for="confirmPassword"></label><input id="confirmPassword" name="confirmPassword"
+                                                        placeholder="Confirm your password" type="password"/>
+        </div>
+        <div class="error" id="confirmPasswordError"></div>
+        <div class="input-group">
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div class="google-signup">
+        <button><i class="fab fa-google"></i> Sign Up with Google</button>
+    </div>
+</div>
+<script src="/scripts/globals.js"></script>
+<script src="/scripts/auth.js"></script>
+</body>
+</html>
