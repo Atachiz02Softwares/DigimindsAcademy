@@ -700,11 +700,16 @@ body {
 }
 
 .form-container {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-right: 20px;
+    background: rgb(225, 185, 255, 0.4);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 50px;
 }
 
 .form-container p {
@@ -715,6 +720,15 @@ body {
 .form-container h1 {
     font-size: 24px;
     margin: 10px 0 20px 0;
+}
+
+.form-container input:hover, .form-container textarea:hover {
+    border-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input[type="submit"]:hover {
+    transform: scale(1.05);
 }
 
 .form-container input, .form-container textarea {
@@ -730,9 +744,10 @@ body {
     color: #fff;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
 }
 
 .image-container {
@@ -853,17 +868,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-}
-
-.footer::before {
-    content: "";
-    display: block;
-    width: 100vw; /* Full viewport width */
-    height: 1px;
-    background-color: #0000FF;
-    margin: 0 auto 10px; /* Center the line and add bottom margin */
-    position: absolute;
-    left: 0;
 }
 
 @media (max-width: 768px) {
